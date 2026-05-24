@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Check, 
-  X, 
-  ArrowRight, 
-  Star, 
-  Phone, 
-  Mail, 
-  Instagram, 
-  Facebook, 
+import {
+  Check,
+  X,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
   MessageCircle,
   MapPin,
   ShieldCheck,
@@ -19,6 +19,7 @@ import {
   Diamond,
   Sparkles
 } from 'lucide-react';
+import { ParklinksApp } from './parklinks/ParklinksApp';
 
 // --- Components ---
 
@@ -831,11 +832,11 @@ const ExitPopup = () => {
 
 // --- Main App ---
 
-export default function App() {
+function ExistingLanding() {
   return (
     <div className="min-h-screen">
       <CustomCursor />
-      
+
       <div className="bg-gold px-6 md:px-[60px] py-3 flex items-center justify-center gap-4 text-[0.78rem] tracking-[0.12em] uppercase text-white font-medium">
         <div className="w-1.5 h-1.5 bg-white rounded-full animate-blink" />
         Limited Units Now Available — 2025 Pre-Selling Prices Still in Effect
@@ -843,7 +844,7 @@ export default function App() {
       </div>
 
       <Navbar />
-      
+
       <main>
         <Hero />
         <TrustStrip />
@@ -862,4 +863,26 @@ export default function App() {
       <ExitPopup />
     </div>
   );
+}
+
+type Route = 'parklinks' | 'home';
+
+function readRoute(): Route {
+  if (typeof window === 'undefined') return 'home';
+  return window.location.hash.startsWith('#/parklinks') ? 'parklinks' : 'home';
+}
+
+function useHashRoute(): Route {
+  const [route, setRoute] = useState<Route>(readRoute);
+  useEffect(() => {
+    const onChange = () => setRoute(readRoute());
+    window.addEventListener('hashchange', onChange);
+    return () => window.removeEventListener('hashchange', onChange);
+  }, []);
+  return route;
+}
+
+export default function App() {
+  const route = useHashRoute();
+  return route === 'parklinks' ? <ParklinksApp /> : <ExistingLanding />;
 }
