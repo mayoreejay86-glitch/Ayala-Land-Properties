@@ -124,3 +124,53 @@ body:has(a:hover) .cursor-ring,
 body:has(button:hover) .cursor-ring {
   @apply w-14 h-14 border-gold;
 }
+
+.editorial-rule {
+  @apply w-full h-[1px] bg-gold/40;
+}
+
+/* Print stylesheet — newsletter PDF export */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    cursor: auto !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cursor,
+  nav,
+  .sticky-cta,
+  .exit-popup {
+    display: none !important;
+  }
+
+  .newsletter {
+    background: #ffffff !important;
+  }
+
+  .newsletter section,
+  .newsletter article,
+  .newsletter header,
+  .newsletter footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .newsletter h1,
+  .newsletter h2,
+  .newsletter h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .newsletter .animate-hero-zoom {
+    animation: none !important;
+    transform: none !important;
+  }
+}

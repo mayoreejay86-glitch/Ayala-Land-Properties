@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import Newsletter from './Newsletter';
 import { 
   Check, 
   X, 
@@ -77,10 +78,10 @@ const Navbar = () => {
         Ayala Land <span className="text-gold">Premium Property</span>
       </a>
       <ul className="hidden md:flex items-center gap-9 list-none">
-        {['Portfolio', 'RFO', 'Living', 'Invest', 'About', 'Contact'].map((item) => (
+        {['Portfolio', 'RFO', 'Living', 'Invest', 'Journal', 'About', 'Contact'].map((item) => (
           <li key={item}>
-            <a 
-              href={`#${item.toLowerCase()}`} 
+            <a
+              href={item === 'Journal' ? '/newsletter' : `#${item.toLowerCase()}`}
               className={`text-[0.78rem] tracking-[0.15em] uppercase font-medium transition-colors duration-300 relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all after:duration-300 hover:after:w-full hover:text-gold-light ${scrolled ? 'text-gray-dark' : 'text-white/85'}`}
             >
               {item}
@@ -832,10 +833,21 @@ const ExitPopup = () => {
 // --- Main App ---
 
 export default function App() {
+  const isNewsletter = typeof window !== 'undefined' && window.location.pathname === '/newsletter';
+
+  if (isNewsletter) {
+    return (
+      <div className="min-h-screen">
+        <CustomCursor />
+        <Newsletter />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <CustomCursor />
-      
+
       <div className="bg-gold px-6 md:px-[60px] py-3 flex items-center justify-center gap-4 text-[0.78rem] tracking-[0.12em] uppercase text-white font-medium">
         <div className="w-1.5 h-1.5 bg-white rounded-full animate-blink" />
         Limited Units Now Available — 2025 Pre-Selling Prices Still in Effect
