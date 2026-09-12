@@ -2,11 +2,13 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Sparkles, ArrowRight, Phone, Mail } from 'lucide-react';
 
-const SKYLINE = "https://images.unsplash.com/photo-1542317854-92922d24c107?w=1800&q=80";
-const TOWER = "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80";
-const ARCH = "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80";
-const WELLNESS = "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1200&q=80";
-const INVEST = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80";
+// Real Parklinks images extracted from the ALP Marketing Materials Drive.
+// Served from public/images/parklinks/ (Vite root) and prima/public/images/parklinks/ (Next.js).
+const SKYLINE = "/images/parklinks/towers-dusk.jpg";
+const TOWER = "/images/parklinks/3br-corner.jpg";
+const ARCH = "/images/parklinks/living-area.jpg";
+const WELLNESS = "/images/parklinks/master-bedroom.jpg";
+const INVEST = "/images/parklinks/kitchen.jpg";
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
   <p className="font-sans text-[0.7rem] tracking-[0.28em] uppercase text-gold flex items-center gap-3.5 before:content-[''] before:block before:w-8 before:h-[1px] before:bg-gold">
