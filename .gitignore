@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# One-off generated previews (regenerated on demand, not source material)
+prima-proposal-preview.html
