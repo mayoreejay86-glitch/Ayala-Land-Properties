@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Premier Journal · Ayala Land Premier</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 18mm;
+    @bottom-center {
+      content: "Ayala Land Premier  ·  The Premier Journal  ·  Vol I  ·  Issue 01";
+      font-family: 'Georgia', serif;
+      font-size: 8pt;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #A09880;
+    }
+    @bottom-right {
+      content: counter(page);
+      font-family: 'Georgia', serif;
+      font-size: 8pt;
+      color: #A09880;
+    }
+  }
+  @page :first {
+    margin: 0;
+    @bottom-center { content: none }
+    @bottom-right { content: none }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0 }
+
+  :root {
+    --cream: #F9F6F1;
+    --charcoal: #1A1A1A;
+    --gold: #B8960C;
+    --gold-light: #D4AF37;
+    --gray-dark: #4A4540;
+    --gray-mid: #A09880;
+  }
+
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: var(--charcoal);
+    background: var(--cream);
+    font-size: 10.5pt;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* ---------- COVER ---------- */
+  .cover {
+    height: 297mm;
+    width: 210mm;
+    padding: 30mm 22mm;
+    background:
+      linear-gradient(135deg, rgba(26,26,26,0.94) 0%, rgba(26,26,26,0.82) 55%, rgba(74,69,64,0.75) 100%),
+      radial-gradient(circle at 80% 20%, rgba(212,175,55,0.18) 0%, transparent 60%),
+      #0e0e0e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    page-break-after: always;
+    position: relative;
+  }
+  .cover::before {
+    content: "";
+    position: absolute;
+    top: 15mm; left: 22mm; right: 22mm;
+    height: 0.5pt;
+    background: var(--gold-light);
+  }
+  .cover::after {
+    content: "";
+    position: absolute;
+    bottom: 15mm; left: 22mm; right: 22mm;
+    height: 0.5pt;
+    background: var(--gold-light);
+  }
+
+  .cover-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 7pt; letter-spacing: 0.35em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+  .cover-top .brand {
+    font-family: 'Georgia', serif;
+    font-size: 14pt; letter-spacing: 0.12em; text-transform: none;
+    color: #fff;
+  }
+  .cover-top .brand em {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+
+  .cover-middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 40mm;
+  }
+  .cover-eyebrow {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 7.5pt; letter-spacing: 0.4em; text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 12mm;
+    padding-left: 16mm;
+    position: relative;
+  }
+  .cover-eyebrow::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 12mm; height: 0.5pt;
+    background: var(--gold-light);
+  }
+  .cover h1 {
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    font-size: 54pt;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    color: #fff;
+    margin-bottom: 10mm;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+    font-weight: 300;
+  }
+  .cover .dek {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 12pt;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.85);
+    max-width: 130mm;
+    font-weight: 300;
+  }
+
+  .cover-bottom {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 7pt; letter-spacing: 0.3em; text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+  .cover-bottom .presented {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 10pt;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: rgba(255,255,255,0.85);
+  }
+  .cover-bottom .presented .name {
+    color: var(--gold-light);
+    font-style: normal;
+  }
+
+  /* ---------- PAGES ---------- */
+  .page {
+    page-break-before: always;
+    padding: 0;
+  }
+  .page:first-of-type { page-break-before: auto }
+
+  h2 {
+    font-family: 'Georgia', serif;
+    font-weight: 300;
+    font-size: 26pt;
+    line-height: 1.2;
+    color: var(--charcoal);
+    margin: 4mm 0 8mm;
+  }
+  h2 em { color: var(--gold); font-style: italic; font-weight: 300 }
+
+  h3 {
+    font-family: 'Georgia', serif;
+    font-weight: 400;
+    font-size: 13pt;
+    line-height: 1.3;
+    color: var(--charcoal);
+    margin-bottom: 3mm;
+  }
+
+  p { margin-bottom: 3mm }
+  p.body { color: var(--gray-dark); text-align: justify; hyphens: auto }
+
+  .eyebrow {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 7pt; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold);
+    padding-left: 14mm;
+    position: relative;
+    margin-bottom: 4mm;
+  }
+  .eyebrow::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    width: 10mm; height: 0.4pt;
+    background: var(--gold);
+  }
+
+  .rule {
+    height: 0.4pt;
+    background: var(--gold);
+    opacity: 0.5;
+    margin: 6mm 0;
+  }
+
+  em.gold {
+    color: var(--gold);
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .signoff {
+    margin-top: 8mm;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 12pt;
+    color: var(--charcoal);
+  }
+
+  /* ---------- FEATURED PROPERTY ---------- */
+  .featured-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 8mm;
+  }
+  .location {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 8pt; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+  .location::before { content: "◆  "; color: var(--gold) }
+
+  .property-grid {
+    display: table;
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 6mm;
+  }
+  .property-grid > div {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+  }
+  .property-visual {
+    padding-right: 8mm;
+  }
+  .visual-panel {
+    height: 100mm;
+    background:
+      linear-gradient(140deg, rgba(26,26,26,0.85) 0%, rgba(74,69,64,0.6) 100%),
+      radial-gradient(circle at 30% 30%, rgba(212,175,55,0.25) 0%, transparent 50%),
+      #2a2622;
+    position: relative;
+    color: #fff;
+    padding: 8mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .visual-panel .tag {
+    align-self: flex-start;
+    display: inline-block;
+    padding: 1.5mm 3mm;
+    border: 0.4pt solid rgba(255,255,255,0.7);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 6.5pt; letter-spacing: 0.25em; text-transform: uppercase;
+    color: #fff;
+  }
+  .visual-panel .art {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--gold-light);
+    font-size: 10pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .visual-panel .art .lg {
+    font-size: 22pt;
+    font-style: normal;
+    letter-spacing: 0.05em;
+    color: #fff;
+    display: block;
+    margin: 2mm 0;
+  }
+  .visual-panel .location-tag {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 7pt; letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .pull {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 12pt;
+    color: var(--gold);
+    line-height: 1.4;
+    margin-bottom: 4mm;
+  }
+
+  .specs { margin-top: 5mm }
+  .spec-row {
+    display: flex; justify-content: space-between;
+    border-bottom: 0.3pt solid rgba(184,150,12,0.35);
+    padding: 2mm 0;
+  }
+  .spec-label {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 7.5pt; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+  .spec-value {
+    font-family: 'Georgia', serif;
+    color: var(--charcoal);
+    font-size: 10pt;
+  }
+
+  .stats {
+    display: table;
+    width: 100%;
+    margin-top: 10mm;
+    border-top: 0.5pt solid var(--gold);
+    border-bottom: 0.5pt solid var(--gold);
+    padding: 6mm 0;
+  }
+  .stat {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    border-left: 0.3pt solid rgba(184,150,12,0.3);
+    padding: 0 3mm;
+  }
+  .stat:first-child { border-left: 0 }
+  .stat-value {
+    font-family: 'Georgia', serif;
+    font-size: 14pt;
+    color: var(--gold-light);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 6.5pt; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gray-dark);
+    margin-top: 2.5mm;
+  }
+
+  /* ---------- MARKET ---------- */
+  .market-cols {
+    display: table;
+    width: 100%;
+    margin-top: 4mm;
+  }
+  .market-cols > div {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+  }
+  .market-cols > div:first-child { padding-right: 6mm }
+  .market-cols > div:last-child { padding-left: 6mm }
+
+  blockquote {
+    margin: 10mm 0 0;
+    padding: 2mm 0 2mm 6mm;
+    border-left: 1pt solid var(--gold);
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 15pt;
+    line-height: 1.4;
+    color: var(--charcoal);
+    max-width: 150mm;
+  }
+
+  /* ---------- LIFESTYLE ---------- */
+  .lifestyle-intro {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--gray-dark);
+    font-size: 11pt;
+    margin-bottom: 8mm;
+    max-width: 130mm;
+  }
+
+  .cards { display: table; width: 100%; border-spacing: 4mm 0; margin-left: -4mm }
+  .card {
+    display: table-cell;
+    width: 33.3%;
+    vertical-align: top;
+  }
+  .card-visual {
+    height: 40mm;
+    margin-bottom: 5mm;
+    padding: 5mm;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Georgia', serif;
+    font-size: 18pt;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+  .card-visual.arch {
+    background: linear-gradient(160deg, #3a352e 0%, #1a1a1a 100%);
+  }
+  .card-visual.wellness {
+    background: linear-gradient(160deg, #3d4a3a 0%, #1a2418 100%);
+  }
+  .card-visual.invest {
+    background: linear-gradient(160deg, #4a3f2a 0%, #1a1610 100%);
+  }
+  .card-hairline {
+    width: 12mm; height: 0.5pt; background: var(--gold);
+    margin-bottom: 3mm;
+  }
+  .card-cat {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 6.5pt; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2mm;
+  }
+  .card p {
+    font-size: 9.5pt;
+    color: var(--gray-dark);
+    line-height: 1.55;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  /* ---------- WHY ---------- */
+  .why {
+    background: var(--charcoal);
+    color: #fff;
+    padding: 18mm 15mm;
+    margin: 0 -18mm;
+  }
+  .why .eyebrow { color: var(--gold-light) }
+  .why .eyebrow::before { background: var(--gold-light) }
+  .why h2 { color: #fff; font-size: 24pt }
+  .why h2 em { color: var(--gold-light) }
+  .why-grid {
+    display: table; width: 100%; border-spacing: 6mm 0;
+    margin: 8mm -3mm 0;
+  }
+  .why-item {
+    display: table-cell;
+    width: 33.3%;
+    vertical-align: top;
+  }
+  .why-num {
+    font-family: 'Georgia', serif;
+    font-size: 26pt;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 4mm;
+  }
+  .why-item h3 { color: #fff; font-size: 12pt; margin-bottom: 3mm }
+  .why-item p { color: rgba(255,255,255,0.72); font-size: 9.5pt; line-height: 1.6 }
+
+  /* ---------- CTA ---------- */
+  .cta { text-align: center; padding: 8mm 0 }
+  .cta .spark {
+    font-family: 'Georgia', serif;
+    font-size: 18pt; color: var(--gold);
+    margin-bottom: 5mm;
+  }
+  .cta .eyebrow {
+    display: inline-block; padding-left: 0;
+    justify-content: center;
+  }
+  .cta .eyebrow::before { display: none }
+  .cta h2 { max-width: 150mm; margin: 4mm auto 6mm }
+  .cta p.body {
+    max-width: 130mm; margin: 0 auto 8mm;
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 4mm 14mm;
+    border: 0.6pt solid var(--gold);
+    color: var(--gold);
+    font-family: 'Helvetica', sans-serif;
+    font-size: 8pt; letter-spacing: 0.28em; text-transform: uppercase;
+    font-weight: 500;
+  }
+  .contact-row {
+    margin-top: 8mm;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 8.5pt; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+  .contact-row .div { color: var(--gold); margin: 0 5mm }
+
+  /* ---------- CLOSING ---------- */
+  .closing { text-align: center; margin-top: 15mm }
+  .closing p.body {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: var(--gray-dark);
+    font-size: 11pt;
+    line-height: 1.75;
+    text-align: center;
+    max-width: 145mm;
+    margin: 6mm auto 0;
+  }
+  .closing .presented {
+    margin-top: 8mm;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 13pt;
+    color: var(--charcoal);
+  }
+  .closing .presented .name {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .avoid-break { page-break-inside: avoid }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-top">
+    <span class="brand">Ayala Land <em>Premier</em></span>
+    <span>Vol I · Issue 01 · May 2026</span>
+  </div>
+
+  <div class="cover-middle">
+    <p class="cover-eyebrow">The Premier Journal — Quezon City</p>
+    <h1>Where the City<br/>Meets Its<br/><em>Quiet Center</em></h1>
+    <p class="dek">An editorial introduction to Parklinks North &amp; South Tower — a residence shaped by greenery, geometry, and a generation of Ayala Land craftsmanship.</p>
+  </div>
+
+  <div class="cover-bottom">
+    <span>For Private Circulation</span>
+    <span class="presented">Presented by <span class="name">Ree jay</span></span>
+  </div>
+</div>
+
+<!-- LETTER FROM THE EDITOR -->
+<div class="page">
+  <p class="eyebrow">A Letter from the Editor</p>
+  <h2>For the discerning few who measure home in <em class="gold">decades</em>, not square meters.</h2>
+  <p class="body">To our investors, principals, and families — welcome to the first issue of The Premier Journal. This is a quiet conversation, written for the few who already know what they are looking for: a residence that holds its composure over time, an address whose meaning compounds with the years, and a partner who treats discretion as a standard, not a service.</p>
+  <p class="body">Inside, we look at one of the most considered new addresses in the metro, the shifting climate of Philippine luxury real estate, and a few quiet pleasures we believe make a residence feel like home.</p>
+  <p class="signoff">— Ree jay</p>
+
+  <div class="rule"></div>
+
+  <!-- FEATURED PROPERTY -->
+  <div class="avoid-break">
+    <p class="eyebrow">The Featured Property</p>
+    <div class="featured-header">
+      <h2 style="margin:0">Parklinks <em>North &amp; South Tower</em></h2>
+      <span class="location">Quezon City · Pasig</span>
+    </div>
+
+    <div class="property-grid">
+      <div class="property-visual">
+        <div class="visual-panel">
+          <span class="tag">Pre-Selling</span>
+          <div class="art">
+            Parklinks
+            <span class="lg">N &amp; S</span>
+            Tower
+          </div>
+          <span class="location-tag">Quezon City · 35 ha Estate</span>
+        </div>
+      </div>
+      <div>
+        <p class="pull">A residence inside the greenest urban estate in the metro.</p>
+        <p class="body">Set within a 35-hectare master-planned estate where greenery is the architecture, Parklinks North and South Tower offer a way of living that very few addresses in the country can promise — calm, walkable, and quietly cinematic at every hour.</p>
+        <p class="body">Interiors are organized around long sightlines and natural light, with finishes chosen for the way they age. Amenities are positioned to feel like a private resort club, not a building lobby.</p>
+
+        <div class="specs">
+          <div class="spec-row"><span class="spec-label">Unit Sizes</span><span class="spec-value">[PLACEHOLDER]</span></div>
+          <div class="spec-row"><span class="spec-label">Starting Price</span><span class="spec-value">[PLACEHOLDER]</span></div>
+          <div class="spec-row"><span class="spec-label">Turnover</span><span class="spec-value">[PLACEHOLDER]</span></div>
+          <div class="spec-row"><span class="spec-label">Amenities</span><span class="spec-value">[PLACEHOLDER]</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-value">[  ]</div><div class="stat-label">Towers</div></div>
+      <div class="stat"><div class="stat-value">[  ]</div><div class="stat-label">Floors</div></div>
+      <div class="stat"><div class="stat-value">[  ]</div><div class="stat-label">Unit Mix</div></div>
+      <div class="stat"><div class="stat-value">[  ]</div><div class="stat-label">Estate Size</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET INSIGHTS -->
+<div class="page">
+  <p class="eyebrow">Market Insights · Philippines · 2026</p>
+  <h2>The luxury inventory is <em class="gold">quietly tightening</em>.</h2>
+
+  <div class="market-cols">
+    <div>
+      <p class="body">Prime supply across Makati, BGC, and the new Ortigas–Quezon City corridor has continued to thin through the last twenty-four months. Developers with land banks of estate-scale quality are now the exception, not the norm.</p>
+      <p class="body">At the same time, the country's high-net-worth population has grown faster than premier inventory can replace itself — and a meaningful share of that demand is being placed by Filipino principals returning home, not foreign capital.</p>
+    </div>
+    <div>
+      <p class="body">Ayala Land's premier portfolio sits at the centre of this shift. Estate-driven projects like Parklinks remain among the few where land, design, and stewardship are held by one institution from masterplan to turnover.</p>
+      <p class="body">For long-horizon buyers, the question has moved from <em>where to buy</em> to <em>whether a comparable address will still be available next year</em>.</p>
+    </div>
+  </div>
+
+  <blockquote>"The most resilient addresses in this market are the ones that were never sold on price."</blockquote>
+
+  <!-- LIFESTYLE -->
+  <div style="margin-top: 18mm" class="avoid-break">
+    <p class="eyebrow">The Lifestyle</p>
+    <h2>Three quiet pleasures of a Parklinks address.</h2>
+    <p class="lifestyle-intro">Architecture, wellness, and the long view — the things a residence is finally judged on.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-visual arch">Architecture</div>
+        <div class="card-hairline"></div>
+        <div class="card-cat">The Design</div>
+        <h3>A language that ages well.</h3>
+        <p>Long horizontal lines, deep shaded balconies, and a restrained material palette — interiors built to feel current a decade from now, not just on turnover day.</p>
+      </div>
+      <div class="card">
+        <div class="card-visual wellness">Wellness</div>
+        <div class="card-hairline"></div>
+        <div class="card-cat">The Estate</div>
+        <h3>A green spine, not a corridor.</h3>
+        <p>Parklinks is organised around a continuous park, not a road. Residents step out of the lobby into something closer to a botanical garden than a driveway.</p>
+      </div>
+      <div class="card">
+        <div class="card-visual invest">Investment</div>
+        <div class="card-hairline"></div>
+        <div class="card-cat">The Trend</div>
+        <h3>Quezon City rising.</h3>
+        <p>Infrastructure, schools, and head offices have moved north. The Ortigas–QC line is becoming the metro's third premier address — and prices still reflect the older perception.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY THIS MATTERS -->
+<div class="page">
+  <div class="why">
+    <p class="eyebrow">Why This Matters</p>
+    <h2>The value of a premier address is not what it costs today — it is what it <em>cannot be replicated</em> tomorrow.</h2>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h3>Compounding Value</h3>
+        <p>Estate-led Ayala addresses have historically held and grown their value through every market cycle — because the land, the design, and the standard of stewardship are not separable.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h3>Genuine Scarcity</h3>
+        <p>There are only so many ways to assemble 35 hectares of contiguous prime land inside the metro. Parklinks is one of the last of its kind, not the first of many.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h3>The Ayala Legacy</h3>
+        <p>For more than eight decades, Ayala Land has built the addresses Filipino families pass to the next generation. The brand is not a marketing line — it is the resale value.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta avoid-break" style="margin-top: 20mm">
+    <div class="spark">✦</div>
+    <p class="eyebrow">A Private Invitation</p>
+    <h2>Schedule a private viewing of <em class="gold">Parklinks North &amp; South Tower</em>.</h2>
+    <p class="body">Presentations are held in our private sales lounge, by appointment. Floor plans, pricing, and turnover details are walked through personally — not sent in bulk.</p>
+    <span class="btn">Request a Private Presentation</span>
+    <div class="contact-row">
+      <span>☎ [PLACEHOLDER: phone]</span>
+      <span class="div">·</span>
+      <span>✉ [PLACEHOLDER: email]</span>
+    </div>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="rule"></div>
+    <p class="body">Thank you for the time you spent with this issue. A residence of this caliber is rarely a transaction — it is a relationship that begins long before the first viewing and continues long after turnover. Whenever you are ready, I would be honoured to walk you through it personally.</p>
+    <p class="presented">Presented by <span class="name">Ree jay</span> | Ayala Land Premier</p>
+  </div>
+</div>
+
+</body>
+</html>
