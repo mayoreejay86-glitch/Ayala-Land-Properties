@@ -1,0 +1,161 @@
+{
+  "_source": "Parklinks Seller's Brief 0726.pdf + Aug 2026 pricing sheets, extracted 2026-09-12",
+  "_note": "Sample and range prices are indicative from Aug 2026 computation templates; final pricing is confirmed by ALP sales desk.",
+  "estate": {
+    "name": "Parklinks",
+    "developer": "Ayala Land Premier",
+    "coDeveloper": "Eton Properties",
+    "landArea_hectares": 35,
+    "location": {
+      "quezonCity_hectares": 5,
+      "pasig_hectares": 30
+    },
+    "openSpacePct": 52,
+    "developablePct": 48,
+    "tagline": "The greenest urban estate in Metro Manila and the largest along the C-5 corridor",
+    "components": [
+      "Ayala Malls Parklinks (opening Q1 2027 for floors 1-3; The Social Q3 2027)",
+      "Parklinks North Tower",
+      "Parklinks South Tower",
+      "North Eco Terraces",
+      "South Eco Terraces",
+      "Eco Center Lawn + Garden",
+      "Eco Park + Marikina River Esplanade",
+      "Casa Ibarra (residential village)",
+      "Multiple Intelligence International School (MIIS)"
+    ]
+  },
+  "northTower": {
+    "launchYear": 2018,
+    "turnover": "Beginning Q3 2026",
+    "landArea_sqm": 4212,
+    "totalFloors": 55,
+    "totalUnits": 280,
+    "unitTypes": "1BR – 4BR",
+    "unitSizeRange_sqm": "70 – 306",
+    "unitsPerFloor": "4 – 8",
+    "constructionUpdate": "As of April 2026: final stage; amenities ready by Sep 2026; more than 100 residential units completed; turnover in batches from lower floors upward.",
+    "priceRange_php": {
+      "starting": 10515444,
+      "top": 125352000,
+      "sample": {
+        "1BR Classic Residence (70-72 sqm)": "~PHP 10.5M starting",
+        "2BR Classic Residence (141 sqm)": "~PHP 58M – 60M",
+        "2BR Corner Residence (159 sqm)": "~PHP 58M – 60M",
+        "3BR Corner Residence (198 sqm)": "~PHP 70M – 74M",
+        "4BR Sky Villa (306 sqm)": "up to ~PHP 125M"
+      }
+    },
+    "unitBreakdown": [
+      { "name": "1BR Classic Residence", "totalArea_sqm": "70-72", "count": 69, "parking": 1 },
+      { "name": "2BR Classic Residence", "totalArea_sqm": 141, "count": 23, "parking": 1 },
+      { "name": "2BR Corner Residence", "totalArea_sqm": "158-159", "count": 46, "parking": 1 },
+      { "name": "2BR Horizon Suite", "totalArea_sqm": "143-160", "count": 30, "parking": "1-2" },
+      { "name": "3BR Corner Residence", "totalArea_sqm": 198, "count": 46, "parking": 2 },
+      { "name": "3BR Horizon Suite", "totalArea_sqm": "196-209", "count": 18, "parking": 2 },
+      { "name": "3BR Grand Horizon Suite", "totalArea_sqm": 231, "count": 6, "parking": 2 },
+      { "name": "3BR Horizon Terrace Suite", "totalArea_sqm": 270, "count": 4, "parking": 3 },
+      { "name": "3BR Horizon Villa", "totalArea_sqm": 282, "count": 2, "parking": 3 },
+      { "name": "3BR East Sky Suite", "totalArea_sqm": 232, "count": 9, "parking": 3 },
+      { "name": "3BR West Sky Suite", "totalArea_sqm": "267-268", "count": 18, "parking": 3 },
+      { "name": "4BR Sky Villa", "totalArea_sqm": 306, "count": 9, "parking": 3 }
+    ]
+  },
+  "southTower": {
+    "launchYear": "2022 (Re-launch)",
+    "turnover": "Beginning Q2 2029",
+    "landArea_sqm": 4002,
+    "totalFloors": 55,
+    "totalUnits": 313,
+    "unitTypes": "1BR – 3BR",
+    "unitSizeRange_sqm": "70 – 286",
+    "unitsPerFloor": "4 – 9",
+    "constructionUpdate": "Structural works to 12th floor, concrete complete to 10th; masonry and painting through 5th floor.",
+    "priceRange_php": {
+      "starting": 10001671,
+      "top": 119514000,
+      "sample": {
+        "1BR Classic Residence (70-71 sqm)": "~PHP 26M – 28M",
+        "2BR Classic Residence (142 sqm)": "~PHP 46M – 48M",
+        "2BR Corner Residence (160 sqm)": "~PHP 51M – 53M",
+        "3BR Sky Villa (269 sqm)": "up to ~PHP 119M"
+      }
+    },
+    "unitBreakdown": [
+      { "name": "1BR Classic Residence", "totalArea_sqm": "70-71", "count": 92, "parking": 1 },
+      { "name": "2BR Classic Residence", "totalArea_sqm": 142, "count": 23, "parking": 1 },
+      { "name": "2BR Corner Residence", "totalArea_sqm": 160, "count": 92, "parking": 1 },
+      { "name": "2BR Horizon Suite", "totalArea_sqm": "157-161", "count": 40, "parking": "1-2" },
+      { "name": "2BR Sky Suite", "totalArea_sqm": 161, "count": 16, "parking": 2 },
+      { "name": "3BR Horizon Suite", "totalArea_sqm": "208-217", "count": 20, "parking": 2 },
+      { "name": "3BR Horizon Villa", "totalArea_sqm": 286, "count": 2, "parking": 3 },
+      { "name": "3BR Sky Suite", "totalArea_sqm": 217, "count": 8, "parking": 3 },
+      { "name": "3BR Sky Villa", "totalArea_sqm": 269, "count": 20, "parking": 3 }
+    ]
+  },
+  "amenities": {
+    "ground": [
+      "Residential Lobby",
+      "Elevator Lobby",
+      "Motor Court",
+      "Esplanade Hall",
+      "The Shops at the Esplanade"
+    ],
+    "amenityDeck_10F": [
+      "Pool Complex + Outdoor Lounge",
+      "Social Hall + Lawn",
+      "Fitness Center",
+      "Indoor Play Area",
+      "Outdoor Play Area (shared)",
+      "Sports Court (shared)"
+    ],
+    "horizonTerrace_45F": [
+      "Lounge Areas with double-volume ceiling",
+      "Panoramic views of Antipolo Mountain Range"
+    ],
+    "services": [
+      "24/7 concierge",
+      "24-hour security",
+      "100% back-up power",
+      "4 high-speed passenger elevators + dedicated service elevator",
+      "Integrated CCTV in select common areas",
+      "Proximity card access for elevators and key points",
+      "Fire detection + alarm + sprinkler system",
+      "Materials Recovery Facility (MRF)"
+    ],
+    "sustainability": [
+      "Philippine Green Building Code compliant",
+      "Low-emissivity (low-e) glass",
+      "LED lighting fixtures in common areas",
+      "Water-efficient fixtures",
+      "Maximized natural ventilation"
+    ]
+  },
+  "unitFeatures": [
+    "Expansive balconies",
+    "Air-conditioning units",
+    "Duravit® and Hansgrohe® bathroom fixtures",
+    "Energy-efficient lighting",
+    "European-branded cabinet systems in main kitchens",
+    "Built-in free-standing range + range hood",
+    "Provision for food waste disposal + dishwasher",
+    "Individual metering for water + electricity",
+    "Audio Guest Enunciator System + duress button",
+    "CATV in all bedrooms + living + utility",
+    "Fiber-to-the-Home (FTTH) provision"
+  ],
+  "designConsultants": {
+    "architecture": [
+      "HB Design — Hans Brouwer (formerly under Lord Norman Foster; offices in Hong Kong, Singapore, Jakarta, Phuket, Bangkok)",
+      "PRSP Architects — Filipino firm behind Two Roxas Triangle, Arbor Lanes, Parklinks Mall, Seda BGC, Vertis North"
+    ],
+    "landscape": "CLARQ Landscape Design (also did Aera Entrance & Visitor Center, Courtyards Vermosa, One Ayala, West Gallery Place)"
+  },
+  "connectivity": [
+    "C-5 / E. Rodriguez Jr. Avenue frontage",
+    "Direct Parklinks Bridge to Metropoli",
+    "Bridge to Circulo Verde",
+    "Parklinks Avenue estate spine",
+    "Marikina River Eco Park"
+  ]
+}

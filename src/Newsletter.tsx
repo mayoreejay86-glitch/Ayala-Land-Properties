@@ -116,9 +116,10 @@ const Newsletter = () => {
               </p>
               <div className="space-y-5 text-[0.98rem] font-light leading-[1.85] text-gray-dark">
                 <p>
-                  Set within a 35-hectare master-planned estate where greenery is the architecture,
-                  Parklinks North and South Tower offer a way of living that very few addresses in
-                  the country can promise — calm, walkable, and quietly cinematic at every hour.
+                  Set within a 35-hectare master-planned joint venture of Ayala Land and Eton
+                  Properties — 52% of it open space — Parklinks North and South Tower offer a way
+                  of living that very few addresses in the country can promise: calm, walkable,
+                  and quietly cinematic at every hour.
                 </p>
                 <p>
                   Interiors are organized around long sightlines and natural light, with finishes
@@ -130,19 +131,19 @@ const Newsletter = () => {
               <div className="mt-10 space-y-4">
                 <div className="flex justify-between border-b border-gold/30 pb-3">
                   <span className="text-[0.72rem] tracking-[0.2em] uppercase text-gray-dark">Unit Sizes</span>
-                  <span className="font-serif text-charcoal">[PLACEHOLDER: unit sizes]</span>
+                  <span className="font-serif text-charcoal">70 – 306 sqm · 1BR to 4BR</span>
                 </div>
                 <div className="flex justify-between border-b border-gold/30 pb-3">
                   <span className="text-[0.72rem] tracking-[0.2em] uppercase text-gray-dark">Starting Price</span>
-                  <span className="font-serif text-charcoal">[PLACEHOLDER: starting price]</span>
+                  <span className="font-serif text-charcoal">from ~₱10.5M · up to ~₱125M</span>
                 </div>
                 <div className="flex justify-between border-b border-gold/30 pb-3">
                   <span className="text-[0.72rem] tracking-[0.2em] uppercase text-gray-dark">Turnover</span>
-                  <span className="font-serif text-charcoal">[PLACEHOLDER: turnover]</span>
+                  <span className="font-serif text-charcoal">North Q3 2026 · South Q2 2029</span>
                 </div>
                 <div className="flex justify-between border-b border-gold/30 pb-3">
                   <span className="text-[0.72rem] tracking-[0.2em] uppercase text-gray-dark">Signature Amenities</span>
-                  <span className="font-serif text-charcoal text-right max-w-[60%]">[PLACEHOLDER: amenities]</span>
+                  <span className="font-serif text-charcoal text-right max-w-[60%]">45F Horizon Terrace · 10F Pool &amp; Fitness · 24/7 Concierge</span>
                 </div>
               </div>
 
@@ -158,10 +159,10 @@ const Newsletter = () => {
           {/* Stat strip */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 border-y border-gold/40 py-10">
             {[
-              { label: 'Towers', value: '[PLACEHOLDER]' },
-              { label: 'Floors', value: '[PLACEHOLDER]' },
-              { label: 'Unit Mix', value: '[PLACEHOLDER]' },
-              { label: 'Estate Size', value: '[PLACEHOLDER]' },
+              { label: 'Towers', value: '2' },
+              { label: 'Floors Each', value: '55' },
+              { label: 'Total Units', value: '593' },
+              { label: 'Estate Size', value: '35 ha' },
             ].map((s, i) => (
               <div
                 key={s.label}
