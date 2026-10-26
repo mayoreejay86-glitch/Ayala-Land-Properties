@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Arca South Transit Update</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F9F6F1;
+    --charcoal: #1A1A1A;
+    --gold: #B8960C;
+    --gold-light: #D4AF37;
+    --gold-pale: #F0E6C0;
+    --gray-light: #E8E4DC;
+    --gray-mid: #A09880;
+    --gray-dark: #4A4540;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1350px; }
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'Jost', sans-serif;
+    overflow: hidden;
+  }
+  .card { position: relative; width: 1080px; height: 1350px; display: flex; flex-direction: column; }
+
+  /* Header band */
+  .hero {
+    position: relative;
+    background: var(--charcoal);
+    color: var(--cream);
+    padding: 60px 80px 52px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  .hero svg.lines { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .hero > *:not(svg) { position: relative; }
+  .eyebrow {
+    font-size: 20px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-light); display: flex; align-items: center; gap: 18px;
+    font-weight: 500;
+  }
+  .eyebrow::before { content: ''; width: 44px; height: 1px; background: var(--gold-light); }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500; font-size: 70px; line-height: 1.04;
+    margin-top: 22px; max-width: 860px;
+  }
+  h1 em { font-style: italic; color: var(--gold-light); }
+  .lede {
+    margin-top: 22px; font-size: 24px; line-height: 1.5; font-weight: 300;
+    color: #E6E0D4; max-width: 860px;
+  }
+
+  /* Key facts */
+  .body { padding: 44px 80px 0; flex: 1; display: flex; flex-direction: column; }
+  .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .fact {
+    background: #fff; border: 1px solid var(--gray-light);
+    border-top: 3px solid var(--gold); padding: 24px 28px 24px;
+  }
+  .fact .num {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+    font-size: 50px; line-height: 1; color: var(--gold);
+  }
+  .fact .num small { font-size: 26px; font-weight: 500; }
+  .fact h3 {
+    margin-top: 12px; font-size: 21px; font-weight: 600; letter-spacing: 0.02em;
+  }
+  .fact p { margin-top: 8px; font-size: 19px; line-height: 1.45; color: var(--gray-dark); }
+
+  /* Timeline */
+  .timeline-label {
+    margin-top: 36px; font-size: 17px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+  }
+  .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 22px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 11px; right: 11px; top: 11px; height: 2px; background: var(--gold-pale);
+  }
+  .step { position: relative; padding-right: 16px; }
+  .dot {
+    width: 24px; height: 24px; border-radius: 50%;
+    background: var(--cream); border: 3px solid var(--gold);
+  }
+  .step.done .dot { background: var(--gold); }
+  .step .when { margin-top: 14px; font-size: 21px; font-weight: 600; }
+  .step .what { margin-top: 4px; font-size: 17px; line-height: 1.4; color: var(--gray-dark); }
+
+  /* Why it matters */
+  .why {
+    margin-top: 32px; padding: 24px 30px; background: var(--gold-pale);
+    border-left: 4px solid var(--gold);
+  }
+  .why strong {
+    display: block; font-size: 16px; letter-spacing: 0.25em; text-transform: uppercase;
+    color: #7a6408; font-weight: 600;
+  }
+  .why p {
+    margin-top: 10px; font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 29px; line-height: 1.3; font-weight: 500; color: var(--charcoal);
+  }
+
+  footer {
+    margin-top: auto; padding: 22px 80px 28px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 16px; color: var(--gray-mid); letter-spacing: 0.04em;
+  }
+  footer .src b { color: var(--gray-dark); font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="card">
+  <section class="hero">
+    <!-- Abstract transit lines -->
+    <svg class="lines" viewBox="0 0 1080 480" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.18">
+        <path d="M640 -20 C 760 140, 860 220, 1100 260"/>
+        <path d="M700 -20 C 820 160, 900 300, 1100 360"/>
+        <path d="M560 600 C 720 420, 880 380, 1100 420"/>
+      </g>
+      <g fill="#D4AF37" opacity="0.35">
+        <circle cx="905" cy="226" r="7"/>
+        <circle cx="960" cy="318" r="7"/>
+        <circle cx="905" cy="390" r="7"/>
+      </g>
+    </svg>
+    <div class="eyebrow">Market Update · Arca South, Taguig</div>
+    <h1>Transit links set to <em>drive demand</em> at Arca South</h1>
+    <p class="lede">Ayala Land is counting on new rail, terminal and expressway connections to lift demand at its Arca South estate. Few estates have both mass transit and Skyway access.</p>
+  </section>
+
+  <section class="body">
+    <div class="facts">
+      <div class="fact">
+        <div class="num">160,000</div>
+        <h3>Daily passengers at TCITx</h3>
+        <p>The Taguig City Integrated Terminal Exchange opens in 2028 and can handle up to 5,200 vehicles a day.</p>
+      </div>
+      <div class="fact">
+        <div class="num">2 <small>rail lines</small></div>
+        <h3>Subway + Commuter Rail</h3>
+        <p>The Metro Manila Subway and the North–South Commuter Railway will share the FTI/Arca South station.</p>
+      </div>
+      <div class="fact">
+        <div class="num">Skyway</div>
+        <h3>Direct expressway access</h3>
+        <p>A Skyway link gives fast road access to and from the estate, on top of the rail lines.</p>
+      </div>
+      <div class="fact">
+        <div class="num">5 <small>routes</small></div>
+        <h3>Transport terminal already open</h3>
+        <p>Since April 2026 it has run trips to BGC, Makati, Alabang, Pasay and PITX.</p>
+      </div>
+    </div>
+
+    <div class="timeline-label">Connectivity timeline</div>
+    <div class="timeline">
+      <div class="step done"><div class="dot"></div><div class="when">Apr 2026</div><div class="what">Arca South Transport Terminal opens</div></div>
+      <div class="step"><div class="dot"></div><div class="when">Q4 2027</div><div class="what">Partial commuter rail operations</div></div>
+      <div class="step"><div class="dot"></div><div class="when">2028</div><div class="what">TCITx terminal exchange opens</div></div>
+      <div class="step"><div class="dot"></div><div class="when">2034</div><div class="what">Subway–NSCR common station</div></div>
+    </div>
+
+    <div class="why">
+      <strong>Why it matters</strong>
+      <p>Early buyers get in before the major transit links open in 2027–2028.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span class="src">Source: <b>BusinessWorld</b>, October 25, 2026</span>
+    <span>Ayala Land · Arca South Estate</span>
+  </footer>
+</div>
+</body>
+</html>
