@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gardencourt Residences — Proposal for Mrs. Kim and Mr. Gab Parungao</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #1E3A32;
+    --green-2: #2C5446;
+    --gold: #A8843A;
+    --gold-pale: #F4EEDF;
+    --cream: #FAF8F3;
+    --ink: #1C2320;
+    --mut: #666C67;
+    --line: #E2DCCD;
+  }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; color: var(--ink); font: 9.4px/1.45 Inter, Arial, sans-serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; padding: 13mm 14mm 9mm; display: flex; flex-direction: column;
+    overflow: hidden; page-break-after: always; position: relative; }
+  .page:last-child { page-break-after: auto; }
+
+  /* Running header / footer */
+  .rh { display: flex; justify-content: space-between; font-size: 7.4px; letter-spacing: .16em;
+    text-transform: uppercase; color: var(--mut); padding-bottom: 2.4mm; border-bottom: 1px solid var(--line); }
+  .rh b { color: var(--gold); font-weight: 600; }
+  .rf { margin-top: auto; display: flex; justify-content: space-between; font-size: 7.2px; color: var(--mut);
+    padding-top: 2.4mm; border-top: 1px solid var(--line); letter-spacing: .03em; }
+
+  /* Type */
+  .kicker { margin-top: 7mm; font-size: 8px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  h2 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 27px; line-height: 1.1;
+    color: var(--green); margin-top: 1.5mm; }
+  .intro { margin-top: 2.5mm; font-size: 10px; color: #3d4440; max-width: 165mm; }
+  h3 { font-size: 8px; letter-spacing: .18em; text-transform: uppercase; color: var(--green); font-weight: 700;
+    margin: 6mm 0 2.2mm; padding-bottom: 1.4mm; border-bottom: 1.5px solid var(--green); display: flex; justify-content: space-between; }
+  h3 small { font-size: 7.4px; letter-spacing: .02em; text-transform: none; color: var(--mut); font-weight: 400; }
+  b, strong { font-weight: 600; }
+  .note { font-size: 7.4px; color: var(--mut); margin-top: 1.6mm; line-height: 1.4; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; }
+  th { background: var(--green); color: #fff; font-weight: 600; font-size: 7.6px; letter-spacing: .04em;
+    text-align: left; padding: 1.7mm 2.2mm; }
+  td { padding: 1.55mm 2.2mm; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td .sub { display: block; font-size: 7px; color: var(--mut); }
+  tr.hl td { background: var(--gold-pale); font-weight: 600; }
+  tr.hl td:first-child { border-left: 3px solid var(--gold); }
+  .lbl { color: var(--mut); width: 34%; }
+
+  /* Figures */
+  figure { position: relative; overflow: hidden; }
+  figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  figcaption { font-size: 6.8px; color: var(--mut); margin-top: 1mm; letter-spacing: .02em; }
+  figcaption b { color: var(--gold); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 6.4px; }
+
+  /* Cover */
+  .cover { padding: 0; }
+  .cover .img { height: 168mm; position: relative; }
+  .cover .img img { width: 100%; height: 100%; object-fit: cover; }
+  .cover .img::after { content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(20,38,32,.55) 0%, rgba(20,38,32,0) 38%, rgba(20,38,32,0) 70%, rgba(20,38,32,.35) 100%); }
+  .cover .brand { position: absolute; top: 14mm; left: 16mm; right: 16mm; z-index: 1; color: #fff;
+    display: flex; justify-content: space-between; font-size: 8px; letter-spacing: .24em; text-transform: uppercase; }
+  .cover .credit { position: absolute; bottom: 3mm; right: 16mm; z-index: 1; color: rgba(255,255,255,.85); font-size: 6.6px; letter-spacing: .08em; }
+  .cover .body { padding: 13mm 16mm 0; flex: 1; display: flex; flex-direction: column; }
+  .cover .tag { font-size: 8.5px; letter-spacing: .26em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .cover h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; font-size: 44px; line-height: 1.02;
+    color: var(--green); margin-top: 3mm; }
+  .cover .for { margin-top: 5mm; font-size: 11px; color: #3d4440; }
+  .cover .for b { color: var(--ink); }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 9mm; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .kpi { padding: 4mm 4mm 4mm 0; }
+  .kpi + .kpi { padding-left: 4mm; border-left: 1px solid var(--line); }
+  .kpi b { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 600; color: var(--green); line-height: 1.05; }
+  .kpi span { font-size: 7.4px; letter-spacing: .12em; text-transform: uppercase; color: var(--mut); }
+  .cover .who { margin-top: auto; padding: 5mm 0 10mm; display: flex; justify-content: space-between; align-items: flex-end; font-size: 8.6px; color: var(--mut); }
+  .cover .who b { color: var(--ink); font-size: 10.5px; display: block; }
+
+  /* Summary */
+  .rec { display: grid; grid-template-columns: 1.15fr 1fr; gap: 0; margin-top: 5mm; border: 1px solid var(--line); }
+  .rec .main { background: var(--green); color: #fff; padding: 5mm 6mm; }
+  .rec .main .t { font-size: 7.4px; letter-spacing: .2em; text-transform: uppercase; color: #D9C38E; font-weight: 600; }
+  .rec .main h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; margin-top: 1.5mm; line-height: 1.1; }
+  .rec .main .spec { margin-top: 1.2mm; font-size: 8.6px; color: #D6E0DB; }
+  .rec .main .nums { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 7mm; margin-top: 4mm; }
+  .rec .main .nums b { display: block; font-size: 15px; font-weight: 600; }
+  .rec .main .nums span { font-size: 7px; letter-spacing: .1em; text-transform: uppercase; color: #BFCFC8; }
+  .rec .alt { padding: 5mm 6mm; background: var(--cream); }
+  .rec .alt .t { font-size: 7.4px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .rec .alt h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 18px; font-weight: 600; color: var(--green); margin-top: 1.5mm; line-height: 1.1; }
+  .rec .alt .spec { margin-top: 1.2mm; font-size: 8.6px; color: var(--mut); }
+  .rec .alt .nums { display: flex; gap: 7mm; margin-top: 4mm; }
+  .rec .alt .nums b { display: block; font-size: 13px; font-weight: 600; color: var(--ink); }
+  .rec .alt .nums span { font-size: 7px; letter-spacing: .1em; text-transform: uppercase; color: var(--mut); }
+
+  .facts td:first-child { width: 22%; font-weight: 600; color: var(--green); }
+  .photos4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; }
+  .photos4 figure .ph { height: 33mm; }
+  .photos4.tall { grid-template-columns: 1fr 1fr; row-gap: 3mm; }
+  .photos4.tall figure .ph { height: 47mm; }
+  .photos4.short figure .ph { height: 28mm; }
+  .photos3 figure .ph { height: 40mm; }
+  .photos3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5mm; }
+
+  /* Estate page */
+  .tl { position: relative; }
+  .tl-row { display: grid; grid-template-columns: 19mm 1fr; gap: 3mm; padding: 1.6mm 0; border-bottom: 1px solid var(--line); }
+  .tl-row .y { font-weight: 700; color: var(--gold); font-variant-numeric: tabular-nums; }
+  .tl-row b { color: var(--ink); }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm; margin-top: 5mm; }
+  .stat { background: var(--cream); border-top: 2px solid var(--gold); padding: 3mm 3.2mm; }
+  .stat b { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 600; color: var(--green); line-height: 1.05; }
+  .stat span { font-size: 7.4px; color: var(--mut); line-height: 1.35; display: block; margin-top: .8mm; }
+
+  /* Gantt-style pipeline */
+  .gantt { margin-top: 1mm; }
+  .g-head, .g-row { display: grid; grid-template-columns: 44mm 1fr; align-items: center; }
+  .g-head .yrs { display: grid; grid-template-columns: repeat(9, 1fr); font-size: 7px; color: var(--mut); font-weight: 600; }
+  .g-head .yrs span { border-left: 1px solid var(--line); padding-left: 1mm; }
+  .g-row { padding: 1.3mm 0; border-bottom: 1px solid var(--line); }
+  .g-row .nm { font-weight: 600; font-size: 8.2px; }
+  .g-row .nm small { display: block; font-weight: 400; color: var(--mut); font-size: 7px; }
+  .track { position: relative; height: 5mm; display: grid; grid-template-columns: repeat(9, 1fr); }
+  .track i { border-left: 1px solid var(--line); }
+  .bar { position: absolute; top: 1mm; height: 3mm; border-radius: 1.5mm; background: var(--green-2); }
+  .bar.build { background: repeating-linear-gradient(135deg, #7E9C90 0 3px, #9DB5AB 3px 6px); }
+  .bar.open { background: var(--gold); }
+  .mark { position: absolute; top: .3mm; width: 4.4mm; height: 4.4mm; border-radius: 50%; background: var(--gold);
+    border: 1.2px solid #fff; box-shadow: 0 0 0 .8px var(--gold); transform: translateX(-50%); }
+  .legend { display: flex; gap: 5mm; font-size: 7px; color: var(--mut); margin-top: 1.6mm; }
+  .legend i { display: inline-block; width: 6mm; height: 2.4mm; border-radius: 1.2mm; vertical-align: -.3mm; margin-right: 1.2mm; }
+
+  /* Units */
+  .units { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 5mm; }
+  .unit .hd { border-top: 3px solid var(--green); padding-top: 2.5mm; }
+  .unit .hd .t { font-size: 7.2px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  .unit .hd h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 20px; font-weight: 600; color: var(--green); margin-top: 1mm; line-height: 1.1; }
+  .unit .plan { height: 93mm; margin: 3mm 0 1mm; border: 1px solid var(--line); background: #fff; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .unit .plan img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .unit table td { padding: 1.35mm 1.6mm; }
+  .price { display: grid; grid-template-columns: 1fr 1fr; background: var(--cream); margin-top: 2.5mm; }
+  .price div { padding: 2.6mm 3mm; }
+  .price div + div { border-left: 1px solid var(--line); }
+  .price span { font-size: 6.8px; letter-spacing: .14em; text-transform: uppercase; color: var(--mut); display: block; }
+  .price b { font-size: 15px; color: var(--green); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* Payment tables */
+  .pay th, .pay td { font-size: 8.1px; }
+  .pay td { padding: 1.45mm 2mm; }
+  .pay td:first-child { white-space: nowrap; }
+  .terms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 5mm; }
+  .box { background: var(--cream); padding: 3.2mm 3.8mm; }
+  .box .t { font-size: 7.2px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 1.4mm; }
+  .box p, .box li { font-size: 8px; color: #3d4440; line-height: 1.45; }
+  .box ul { padding-left: 3.6mm; }
+  .alert { margin-top: 4mm; background: var(--green); color: #fff; padding: 2.6mm 3.8mm; font-size: 8.2px; }
+  .alert b { color: #E3CC93; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.5mm; }
+  .step { border-top: 2px solid var(--gold); padding-top: 2mm; }
+  .step b { display: block; font-size: 8.4px; color: var(--green); }
+  .step span { font-size: 7.6px; color: var(--mut); line-height: 1.4; display: block; margin-top: .6mm; }
+  .contact { margin-top: 5mm; display: flex; justify-content: space-between; align-items: center; background: var(--green); color: #fff; padding: 4mm 6mm; }
+  .contact b { font-size: 11px; display: block; }
+  .contact span { font-size: 8.2px; color: #CFDAD5; }
+  .contact .r { text-align: right; font-size: 9.5px; line-height: 1.6; }
+  .disc { font-size: 6.6px; color: var(--mut); line-height: 1.45; margin-top: 4mm; }
+  .src { font-size: 6.6px; color: var(--mut); line-height: 1.45; margin-top: 2.5mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1 · COVER ============ -->
+<section class="page cover">
+  <div class="img">
+    <img src="img/cover-render.jpg" alt="">
+    <div class="brand"><span>Ayala Land Premier</span><span>Arca South · Taguig</span></div>
+    <div class="credit">Artist’s perspective · Molave and Narra</div>
+  </div>
+  <div class="body">
+    <div class="tag">Acquisition Proposal · November 2026</div>
+    <h1>Gardencourt Residences<br>Narra Tower, 11th Floor</h1>
+    <div class="for">Prepared for <b>Mrs. Kim and Mr. Gab Parungao</b></div>
+
+    <div class="kpis">
+      <div class="kpi"><b>Q1 2027</b><span>Turnover · Near RFO</span></div>
+      <div class="kpi"><b>10%</b><span>Down payment</span></div>
+      <div class="kpi"><b>36–60</b><span>Months, fixed monthly</span></div>
+      <div class="kpi"><b>29 of 364</b><span>Units available</span></div>
+    </div>
+
+    <div class="who">
+      <div><b>Denverleen Huang</b>Property Specialist, Ayala Land Premier</div>
+      <div style="text-align:right">0976 446 2000<br>denverleenh@gmail.com</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · SUMMARY ============ -->
+<section class="page">
+  <div class="rh"><span><b>Gardencourt Residences</b> · Narra · Arca South</span><span>02 / 05</span></div>
+
+  <div class="kicker">Summary</div>
+  <h2>Proposal at a Glance</h2>
+
+  <div class="rec">
+    <div class="main">
+      <div class="t">Recommended</div>
+      <h4>Narra 11D · 2-Bedroom Parklane Suite</h4>
+      <div class="spec">141 sqm incl. 17 sqm balcony · 1 parking slot · Faces the Fitness Park</div>
+      <div class="nums">
+        <div><b>₱47,201,000</b><span>List price</span></div>
+        <div><b>₱81,500</b><span>Monthly × 36</span></div>
+        <div><b>10%</b><span>Down</span></div>
+      </div>
+    </div>
+    <div class="alt">
+      <div class="t">Alternative</div>
+      <h4>Narra 11M · 3-Bedroom Corner Suite</h4>
+      <div class="spec">195 sqm incl. 23 sqm balcony · 2 tandem slots · Corner unit</div>
+      <div class="nums">
+        <div><b>₱66,356,000</b><span>List price</span></div>
+        <div><b>₱114,500</b><span>Monthly × 36</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Key Facts</h3>
+  <table class="facts">
+    <tr><td>Construction</td><td>Towers built and finishing. Narra turnover: <b>Q1 2027 (Near RFO)</b>. Move-in after about three monthly payments.</td></tr>
+    <tr><td>Availability</td><td><b>29 of 364</b> units left (46 in early September 2026). Narra is <b>90% sold</b>. 6 of 19 Parklane and 7 of 19 Corner Suites left.</td></tr>
+    <tr><td>Payment terms</td><td>Deferred terms apply from the ground floor to the <b>11th floor</b> only. Up to <b>20% term discount</b> (10% down, 36 months) plus a <b>1% early booking discount</b>.</td></tr>
+    <tr><td>Equity build-up</td><td>On 10% down / 36 months: <b>₱7,121,000</b> paid toward the unit by month 36. Balance of ₱34,748,175.04 due in month 37, usually through a bank loan.</td></tr>
+    <tr><td>Estate</td><td>Ayala Land’s 74-hectare Arca South. <b>₱24.3B</b> land acquisition (2012) and a <b>₱80B</b> development program. Mall, transport terminal and Main Street opened in 2026.</td></tr>
+    <tr><td>Infrastructure</td><td>Taguig City Integrated Terminal Exchange (2028). <b>FTI Station</b>: an interchange of the North–South Commuter Railway (NSCR) and the Metro Manila Subway. Skyway Stage 4 (SEMME) link.</td></tr>
+  </table>
+
+  <h3>Site Progress <small>Actual photos, June–August 2026</small></h3>
+  <div class="photos4 tall">
+    <figure><div class="ph"><img src="img/exterior-aug2026.jpg" alt=""></div><figcaption><b>Aug 2026</b> Molave and Narra, East Union Drive</figcaption></figure>
+    <figure><div class="ph"><img src="img/gardencourt-pool-jul2026.jpg" alt=""></div><figcaption><b>Jul 2026</b> Gardencourt and pool</figcaption></figure>
+    <figure><div class="ph"><img src="img/motorcourt-jul2026.jpg" alt=""></div><figcaption><b>Jul 2026</b> Motorcourt and arrival</figcaption></figure>
+    <figure><div class="ph"><img src="img/elevator-lobby-jun2026.jpg" alt=""></div><figcaption><b>Jun 2026</b> Molave elevator lobby</figcaption></figure>
+  </div>
+
+  <div class="rf"><span>Prepared for Mrs. Kim and Mr. Gab Parungao · Denverleen Huang · 0976 446 2000</span><span>Ayala Land Premier · DHSUD LTS No. 035187</span></div>
+</section>
+
+<!-- ============ 3 · ESTATE & INFRASTRUCTURE ============ -->
+<section class="page">
+  <div class="rh"><span><b>Gardencourt Residences</b> · Narra · Arca South</span><span>03 / 05</span></div>
+
+  <div class="kicker">Location</div>
+  <h2>Arca South: Investment and Infrastructure</h2>
+  <p class="intro">Arca South is a 74-hectare Ayala Land estate on the former Food Terminal Inc. (FTI) site in Taguig, between Makati, BGC and Alabang, with frontage on C-5 and access to SLEX. Government-funded rail lines and a regional transport hub are being built inside and beside the estate.</p>
+
+  <div class="stat-strip">
+    <div class="stat"><b>₱24.3B</b><span>Ayala Land’s winning bid for the 74-ha FTI property (2012), about ₱32,800 per sqm</span></div>
+    <div class="stat"><b>₱80B</b><span>Development program announced for the estate (2014)</span></div>
+    <div class="stat"><b>~₱250,000</b><span>Per sqm implied by a 2017 third-party lot sale in the estate</span></div>
+    <div class="stat"><b>₱1.36T</b><span>Combined cost of the NSCR (₱873.6B) and Metro Manila Subway (₱488.5B)</span></div>
+  </div>
+
+  <div class="two">
+    <div>
+      <h3>Ayala Land Delivery</h3>
+      <div class="tl">
+        <div class="tl-row"><span class="y">2012</span><span><b>Land acquired.</b> Won the 74-ha FTI property in public bidding with ₱24.3B, ahead of a ₱14.7B runner-up bid.</span></div>
+        <div class="tl-row"><span class="y">2014</span><span><b>₱80B committed</b> to develop the estate.</span></div>
+        <div class="tl-row"><span class="y">Feb 2026</span><span><b>Ayala Malls Arca South</b> opened: 100,000 sqm GFA and 61,000 sqm leasable area, about 30 m from Gardencourt.</span></div>
+        <div class="tl-row"><span class="y">Apr 2026</span><span><b>Arca South Transport Terminal</b> opened: routes to BGC, Makati, Alabang, Pasay and PITX, plus the estate shuttle.</span></div>
+        <div class="tl-row"><span class="y">May 2026</span><span><b>Arca South Main Street</b> opened: a 4.5-ha park spine linking the mall and terminal.</span></div>
+        <div class="tl-row"><span class="y">Apr–Oct 2026</span><span><b>East Service Road widening</b> by Ayala Land, the groundwork for the SEMME and TCITx links.</span></div>
+      </div>
+      <p class="note">Also operating: Landers Superstore, Healthway Cancer Care Hospital, Arca South Pitch (Barça Academy). The Blue Leaf events venue is under construction (2026–27).</p>
+    </div>
+    <div>
+      <h3>Government &amp; PPP Projects</h3>
+      <table>
+        <tr><th>Project</th><th>Scope</th><th class="n">Target</th></tr>
+        <tr><td><b>Taguig City Integrated Terminal Exchange</b><span class="sub">DOTr–Ayala Land PPP · ₱5.2B</span></td><td>Regional bus hub for the south. Up to 160,000 passengers and 5,200 vehicles a day. Building since Feb 2025.</td><td class="n">2028</td></tr>
+        <tr><td><b>North–South Commuter Railway</b><span class="sub">DOTr · ₱873.6B</span></td><td>Clark–Manila–Calamba line, with a station at FTI / Arca South.</td><td class="n">Partial Q4 2027<span class="sub">Full 2034</span></td></tr>
+        <tr><td><b>Metro Manila Subway</b><span class="sub">DOTr · ₱488.5B</span></td><td>Valenzuela–NAIA–FTI line. The FTI station is a shared interchange with the NSCR.</td><td class="n">2032</td></tr>
+        <tr><td><b>Skyway Stage 4 (SEMME)</b><span class="sub">San Miguel Corp.</span></td><td>Integration agreement with Ayala Land for Arca South on- and off-ramps.</td><td class="n">TBA</td></tr>
+      </table>
+      <p class="note">The proposed 2027 national budget includes ₱123.84B for the NSCR and ₱67.44B for the Subway (DBM, Sept 2026).</p>
+    </div>
+  </div>
+
+  <h3>Connectivity Timeline</h3>
+  <div class="gantt">
+    <div class="g-head"><span></span><div class="yrs"><span>2026</span><span>2027</span><span>2028</span><span>2029</span><span>2030</span><span>2031</span><span>2032</span><span>2033</span><span>2034</span></div></div>
+    <div class="g-row"><div class="nm">Gardencourt · Narra<small>Turnover</small></div><div class="track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="mark" style="left:12.5%"></span></div></div>
+    <div class="g-row"><div class="nm">Mall, Terminal, Main Street<small>Open</small></div><div class="track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="bar open" style="left:1%;right:0"></span></div></div>
+    <div class="g-row"><div class="nm">TCITx<small>Under construction</small></div><div class="track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="bar build" style="left:0;width:22.2%"></span><span class="bar" style="left:22.2%;right:0"></span></div></div>
+    <div class="g-row"><div class="nm">NSCR<small>Partial ops, then full line</small></div><div class="track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="bar build" style="left:0;width:19.4%"></span><span class="bar" style="left:19.4%;right:0;opacity:.55"></span><span class="mark" style="left:94.4%"></span></div></div>
+    <div class="g-row"><div class="nm">Metro Manila Subway<small>FTI interchange</small></div><div class="track"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="bar build" style="left:0;width:66.7%"></span><span class="bar" style="left:66.7%;right:0"></span></div></div>
+  </div>
+  <div class="legend"><span><i style="background:repeating-linear-gradient(135deg,#7E9C90 0 3px,#9DB5AB 3px 6px)"></i>Construction</span><span><i style="background:var(--green-2)"></i>Operating</span><span><i style="background:var(--gold)"></i>Open today</span></div>
+
+  <h3>Open in the Estate <small>Actual photos</small></h3>
+  <div class="photos4 short">
+    <figure><div class="ph"><img src="img/ayala-malls-arca-south.jpg" alt=""></div><figcaption><b>Open</b> Ayala Malls Arca South</figcaption></figure>
+    <figure><div class="ph"><img src="img/transport-terminal.jpg" alt=""></div><figcaption><b>Open</b> Arca South Transport Terminal</figcaption></figure>
+    <figure><div class="ph"><img src="img/healthway.jpg" alt=""></div><figcaption><b>Open</b> Healthway Cancer Care Hospital</figcaption></figure>
+    <figure><div class="ph"><img src="img/landers.jpg" alt=""></div><figcaption><b>Open</b> Landers Superstore</figcaption></figure>
+  </div>
+
+  <div class="rf"><span>Government timelines are official targets and may change. Sources are listed on page 5.</span><span>Ayala Land Premier · DHSUD LTS No. 035187</span></div>
+</section>
+
+<!-- ============ 4 · UNITS ============ -->
+<section class="page">
+  <div class="rh"><span><b>Gardencourt Residences</b> · Narra · Arca South</span><span>04 / 05</span></div>
+
+  <div class="kicker">Selected Units</div>
+  <h2>Narra, 11th Floor</h2>
+  <p class="intro">The 11th floor is the highest floor that qualifies for deferred payment terms. Both units are Near RFO with Q1 2027 turnover.</p>
+
+  <div class="units">
+    <div class="unit">
+      <div class="hd"><div class="t">Recommended</div><h4>11D · 2-Bedroom Parklane Suite</h4></div>
+      <div class="plan"><img src="img/plan-2br-parklane.jpg" alt="2-bedroom Parklane Suite floor plan"></div>
+      <figcaption><b>Official layout</b> Not to scale</figcaption>
+      <table style="margin-top:2mm">
+        <tr><td class="lbl">Floor area</td><td>141 sqm, incl. 17 sqm balcony</td></tr>
+        <tr><td class="lbl">Bedrooms</td><td>2</td></tr>
+        <tr><td class="lbl">Orientation</td><td>Fitness Park</td></tr>
+        <tr><td class="lbl">Parking</td><td>1 slot (B2-446)</td></tr>
+        <tr><td class="lbl">Price per sqm</td><td>₱334,759 (list, incl. parking)</td></tr>
+        <tr><td class="lbl">Inventory</td><td>6 of 19 Parklane Suites left</td></tr>
+      </table>
+      <div class="price"><div><span>List price</span><b>₱47,201,000</b></div><div><span>10% down · 36 mo</span><b>₱81,500/mo</b></div></div>
+      <p class="note">Other terms: ₱78,600/mo (10% down, 60 mo) · ₱76,800/mo (20% down, 60 mo).</p>
+    </div>
+    <div class="unit">
+      <div class="hd"><div class="t">Alternative</div><h4>11M · 3-Bedroom Corner Suite</h4></div>
+      <div class="plan"><img src="img/plan-3br-corner.jpg" alt="3-bedroom Corner Suite floor plan"></div>
+      <figcaption><b>Official layout</b> Not to scale</figcaption>
+      <table style="margin-top:2mm">
+        <tr><td class="lbl">Floor area</td><td>195 sqm, incl. 23 sqm balcony</td></tr>
+        <tr><td class="lbl">Bedrooms</td><td>3</td></tr>
+        <tr><td class="lbl">Orientation</td><td>Corner: Fitness Park and East Union Drive</td></tr>
+        <tr><td class="lbl">Parking</td><td>2 tandem slots (B2-421 / B2-422T)</td></tr>
+        <tr><td class="lbl">Price per sqm</td><td>₱340,287 (list, incl. parking)</td></tr>
+        <tr><td class="lbl">Inventory</td><td>7 of 19 Corner Suites left</td></tr>
+      </table>
+      <div class="price"><div><span>List price</span><b>₱66,356,000</b></div><div><span>10% down · 36 mo</span><b>₱114,500/mo</b></div></div>
+      <p class="note">Other terms: ₱110,400/mo (10% down, 60 mo) · ₱108,000/mo (20% down, 60 mo).</p>
+    </div>
+  </div>
+
+  <h3>The Gardencourt <small>Actual photos, June–July 2026, and artist’s perspective</small></h3>
+  <div class="photos3">
+    <figure><div class="ph"><img src="img/pool-complex-jul2026.jpg" alt=""></div><figcaption><b>Jul 2026</b> Pool complex</figcaption></figure>
+    <figure><div class="ph"><img src="img/gardencourt-jun2026.jpg" alt=""></div><figcaption><b>Jun 2026</b> The Gardencourt between the towers</figcaption></figure>
+    <figure><div class="ph"><img src="img/gardencourt-render.jpg" alt=""></div><figcaption><b>Perspective</b> The Gardencourt, completed</figcaption></figure>
+  </div>
+
+  <div class="rf"><span>List prices exclude 12% VAT and Other Charges and include parking. Monthly amounts include VAT. Availability as of 29 Oct 2026, 9:50 AM; subject to prior sale.</span><span>DHSUD LTS No. 035187</span></div>
+</section>
+
+<!-- ============ 5 · PAYMENT TERMS & NEXT STEPS ============ -->
+<section class="page">
+  <div class="rh"><span><b>Gardencourt Residences</b> · Narra · Arca South</span><span>05 / 05</span></div>
+
+  <div class="kicker">Payment Terms</div>
+  <h2>Official Computation</h2>
+  <p class="intro">From Ayala Land Premier’s October 2026 Narra computation. Every term starts with a ₱200,000 reservation. The recommended term is highlighted.</p>
+
+  <h3>Narra 11D · 2-Bedroom Parklane Suite <small>List ₱47,201,000</small></h3>
+  <table class="pay">
+    <tr><th>Term</th><th class="n">Rest of down</th><th class="n">Monthly</th><th class="n">Other charges</th><th class="n">Balance</th><th class="n">All-in total</th></tr>
+    <tr class="hl"><td>10% down · 36 mo</td><td class="n">₱3,987,000</td><td class="n">₱81,500 × 36</td><td class="n">₱2,566,651.80<span class="sub">month 36</span></td><td class="n">₱34,748,175.04<span class="sub">month 37</span></td><td class="n">₱44,435,826.84</td></tr>
+    <tr><td>10% down · 60 mo</td><td class="n">₱4,510,300</td><td class="n">₱78,600 × 60</td><td class="n">₱2,913,132.63<span class="sub">month 60</span></td><td class="n">₱37,676,521.92<span class="sub">month 61</span></td><td class="n">₱50,015,954.55</td></tr>
+    <tr><td>20% down · 36 mo</td><td class="n">₱7,964,500</td><td class="n">₱79,400 × 36</td><td class="n">₱2,567,052.70<span class="sub">month 36</span></td><td class="n">₱29,799,545.66<span class="sub">month 37</span></td><td class="n">₱43,389,498.36</td></tr>
+    <tr><td>20% down · 60 mo</td><td class="n">₱9,011,300</td><td class="n">₱76,800 × 60</td><td class="n">₱2,905,013.33<span class="sub">month 60</span></td><td class="n">₱32,236,792.54<span class="sub">month 61</span></td><td class="n">₱48,961,105.87</td></tr>
+    <tr><td>Cash · 30% + 1% off</td><td class="n">₱38,736,277.50</td><td class="n">—</td><td class="n">Included</td><td class="n">—</td><td class="n">₱38,936,277.50</td></tr>
+  </table>
+
+  <h3>Narra 11M · 3-Bedroom Corner Suite <small>List ₱66,356,000</small></h3>
+  <table class="pay">
+    <tr><th>Term</th><th class="n">Rest of down</th><th class="n">Monthly</th><th class="n">Other charges</th><th class="n">Balance</th><th class="n">All-in total</th></tr>
+    <tr><td>10% down · 36 mo</td><td class="n">₱5,686,100</td><td class="n">₱114,500 × 36</td><td class="n">₱3,613,287.72<span class="sub">month 36</span></td><td class="n">₱48,852,326.24<span class="sub">month 37</span></td><td class="n">₱62,473,713.96</td></tr>
+    <tr><td>10% down · 60 mo</td><td class="n">₱6,421,800</td><td class="n">₱110,400 × 60</td><td class="n">₱4,100,555.39<span class="sub">month 60</span></td><td class="n">₱52,972,179.52<span class="sub">month 61</span></td><td class="n">₱70,318,534.91</td></tr>
+    <tr><td>20% down · 36 mo</td><td class="n">₱11,277,800</td><td class="n">₱111,600 × 36</td><td class="n">₱3,613,947.96<span class="sub">month 36</span></td><td class="n">₱41,893,515.58<span class="sub">month 37</span></td><td class="n">₱61,002,863.55</td></tr>
+    <tr><td>20% down · 60 mo</td><td class="n">₱12,749,300</td><td class="n">₱108,000 × 60</td><td class="n">₱4,101,124.64<span class="sub">month 60</span></td><td class="n">₱45,317,168.86<span class="sub">month 61</span></td><td class="n">₱68,847,593.50</td></tr>
+    <tr><td>Cash · 30% + 1% off</td><td class="n">₱54,532,857.62</td><td class="n">—</td><td class="n">Included</td><td class="n">—</td><td class="n">₱54,732,857.62</td></tr>
+  </table>
+
+  <div class="terms-grid">
+    <div class="box">
+      <div class="t">Discounts applied</div>
+      <p>Term discount: 20% (10% down, 36 mo), 10% (10% down, 60 mo), 22% and 12% (20% down terms), 30% (cash). Plus a 1% early booking discount when the account is booked with complete requirements within 30 days. All discounts are subject to Ayala Land approval.</p>
+    </div>
+    <div class="box">
+      <div class="t">Definitions</div>
+      <p><b>Rest of down</b> completes the down payment (cash: full amount within 30 days). <b>Monthly</b> is fixed for the term. <b>Balance</b> is a lump sum, usually paid through a bank loan. <b>Other charges</b> cover title transfer taxes and fees, utility deposits and two years of condo dues.</p>
+    </div>
+  </div>
+
+  <div class="alert"><b>Validity:</b> These are the October 2026 terms. November 2026 terms may differ. An updated official computation will be issued before reservation.</div>
+
+  <h3>Next Steps</h3>
+  <div class="steps">
+    <div class="step"><b>01 · Site visit</b><span>Narra, the Gardencourt and the estate</span></div>
+    <div class="step"><b>02 · Selection</b><span>Unit and payment term</span></div>
+    <div class="step"><b>03 · Computation</b><span>Signed official computation</span></div>
+    <div class="step"><b>04 · Reservation</b><span>₱200,000; book within 30 days for the 1% discount</span></div>
+    <div class="step"><b>05 · Financing</b><span>Bank pre-qualification for the balance</span></div>
+  </div>
+
+  <div class="contact">
+    <div><b>Denverleen Huang</b><span>Property Specialist · Ayala Land Premier</span></div>
+    <div class="r">0976 446 2000<br>denverleenh@gmail.com</div>
+  </div>
+
+  <p class="src"><b>Sources:</b> Ayala Land Premier availability sheet (29 Oct 2026) and Narra standard terms computation (1 Oct 2026); Ayala Land; DOTr; PPP Center; DBM (Sept 2026); BusinessWorld (Feb, May and Oct 2026); Philippine Star; Manila Bulletin (May 2026); Inquirer (2012, 2014, 2017); Daily Tribune (Oct 2025); San Miguel Corp.</p>
+  <p class="disc">Prepared 1 November 2026 by Denverleen Huang, accredited seller of Ayala Land Premier. DHSUD LTS No. 035187. Not an official computation until signed by the proper signatory. List prices exclude 12% VAT and Other Charges. Discounts are subject to Ayala Land approval and buyer eligibility. Deferred terms apply from the ground floor to the 11th floor only. Availability, prices and terms may change without notice. Move-in follows Ayala Land’s turnover schedule and requirements. Infrastructure timelines are government or third-party targets and may change. Images are artist’s perspectives unless marked as actual photos. Past land values do not indicate future value. Not an official publication of Ayala Land, Inc.</p>
+</section>
+
+</body>
+</html>
