@@ -27,15 +27,15 @@
 
   /* BACK */
   .back { display: flex; flex-direction: column; background: #fff; }
-  .band { background: var(--green); color: var(--ivory); padding: 9mm 13mm 7mm; position: relative; }
+  .band { background: var(--green); color: var(--ivory); padding: 7mm 13mm 5mm; position: relative; }
   .band .top { display: flex; justify-content: space-between; font-size: 7.2px; letter-spacing: .26em; text-transform: uppercase; opacity: .85; }
-  .band .script { font-family: 'Pinyon Script', cursive; font-size: 30px; line-height: 1; margin-top: 4mm; color: #E9E5D2; }
-  .band h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 27px; line-height: 1.08; letter-spacing: .01em; margin-top: 1mm; }
+  .band .script { font-family: 'Pinyon Script', cursive; font-size: 27px; line-height: 1; margin-top: 3mm; color: #E9E5D2; }
+  .band h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.08; letter-spacing: .01em; margin-top: 1mm; }
   .band p { margin-top: 2.2mm; font-size: 8.8px; line-height: 1.5; color: #DCDFD3; max-width: 160mm; }
 
   .wrap { padding: 0 13mm; flex: 1; display: flex; flex-direction: column; }
   h2 { font-size: 7.4px; letter-spacing: .24em; text-transform: uppercase; color: var(--green); font-weight: 700;
-    margin: 5mm 0 2mm; padding-bottom: 1.3mm; border-bottom: 1px solid var(--green); display: flex; justify-content: space-between; align-items: baseline; }
+    margin: 3.6mm 0 1.8mm; padding-bottom: 1.2mm; border-bottom: 1px solid var(--green); display: flex; justify-content: space-between; align-items: baseline; }
   h2 small { font-size: 7px; letter-spacing: .02em; text-transform: none; color: var(--mut); font-weight: 400; }
 
   /* Story timeline */
@@ -55,7 +55,7 @@
   .fact { background: var(--ivory); padding: 2mm 2.2mm; }
   .fact b { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 15px; font-weight: 600; color: var(--green); line-height: 1.05; }
   .fact span { font-size: 6.6px; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); }
-  .pics { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 1.6mm; }
+  .pics { height: 26mm; display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 1.6mm; }
   .pics figure { position: relative; overflow: hidden; }
   .pics img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pics figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 3mm 1.6mm .9mm; font-size: 6px; color: #fff; letter-spacing: .06em;
@@ -63,7 +63,7 @@
 
   /* Units table */
   table { width: 100%; border-collapse: collapse; }
-  th, td { padding: 1.35mm 2mm; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th, td { padding: 1.05mm 2mm; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
   thead th { background: var(--green); color: var(--ivory); font-weight: 600; font-size: 7.6px; letter-spacing: .03em; padding: 1.8mm 2mm; }
   thead th small { display: block; font-weight: 400; color: #C9CFC2; font-size: 6.8px; letter-spacing: .02em; }
   td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
@@ -72,6 +72,14 @@
   tr.sec td { background: var(--ivory); font-size: 6.8px; letter-spacing: .18em; text-transform: uppercase; color: var(--green); font-weight: 700; padding: 1.1mm 2mm; }
   tr.hl td { font-weight: 600; color: var(--ink); }
   tr.hl td.n { color: var(--green); font-size: 9.4px; }
+  td.na, tr.hl td.na { color: var(--sage); font-weight: 400; font-size: 7.4px; }
+  .inc { display: grid; grid-template-columns: 30mm repeat(3, 1fr); margin-top: 2mm; background: var(--ivory); }
+  .inc > div { padding: 2.2mm 2.6mm; }
+  .inc > div + div { border-left: 1px solid var(--line); }
+  .inc .h { background: var(--green); color: var(--ivory); font-size: 7px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; line-height: 1.35; }
+  .inc .br { font-size: 6.8px; letter-spacing: .16em; text-transform: uppercase; color: var(--mut); font-weight: 700; }
+  .inc b { display: block; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13.5px; font-weight: 600; color: var(--green); line-height: 1.1; margin-top: .4mm; }
+  .inc-note { font-size: 6.6px; color: var(--mut); margin-top: 1mm; }
   .best { display: inline-block; margin-left: 1.5mm; background: var(--green); color: var(--ivory); font-size: 6px; letter-spacing: .12em; text-transform: uppercase; padding: .3mm 1.2mm; border-radius: 1mm; vertical-align: .2mm; }
 
   /* Promos */
@@ -81,7 +89,7 @@
   .promo .t { font-size: 7.2px; font-weight: 700; margin-top: 1.2mm; letter-spacing: .02em; }
   .promo p { font-size: 7.3px; color: #4B5148; margin-top: .6mm; line-height: 1.4; }
 
-  .rsvp { margin-top: auto; background: var(--green); color: var(--ivory); padding: 4mm 13mm; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 6mm; align-items: center; }
+  .rsvp { margin-top: auto; background: var(--green); color: var(--ivory); padding: 3mm 13mm; display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 6mm; align-items: center; }
   .rsvp .script { font-family: 'Pinyon Script', cursive; font-size: 22px; line-height: 1; color: #E9E5D2; }
   .rsvp .k { font-size: 6.8px; letter-spacing: .22em; text-transform: uppercase; color: #C9CFC2; }
   .rsvp b { display: block; font-size: 9.6px; font-weight: 600; margin-top: .6mm; }
@@ -123,7 +131,7 @@
           <div class="fact"><b>Q1 2027</b><span>Turnover</span></div>
           <div class="fact"><b>364</b><span>Residences</span></div>
           <div class="fact"><b>90%</b><span>Narra sold</span></div>
-          <div class="fact"><b>29</b><span>Units left</span></div>
+          <div class="fact"><b>2</b><span>Towers</span></div>
         </div>
       </div>
       <div class="pics">
@@ -139,38 +147,45 @@
         <tr><th style="width:36%"></th><th class="n">2-Bedroom Parklane Suite<small>Unit 11D</small></th><th class="n">3-Bedroom Corner Suite<small>Unit 11M</small></th></tr>
       </thead>
       <tbody>
-        <tr><td class="l">Floor area</td><td class="n">141 sqm (incl. 17 sqm balcony)</td><td class="n">195 sqm (incl. 23 sqm balcony)</td></tr>
-        <tr><td class="l">Parking</td><td class="n">1 slot</td><td class="n">2 tandem slots</td></tr>
+        <tr><td class="l">Floor area · parking</td><td class="n">141 sqm (incl. 17 sqm balcony) · 1 slot</td><td class="n">195 sqm (incl. 23 sqm balcony) · 2 tandem</td></tr>
         <tr><td class="l">List price <small>(incl. parking, excl. VAT)</small></td><td class="n">₱47,201,000</td><td class="n">₱66,356,000</td></tr>
-        <tr><td class="l">Available in this unit type</td><td class="n">6 of 19</td><td class="n">7 of 19</td></tr>
-        <tr class="sec"><td colspan="3">Monthly, fixed for the full term · VAT-inclusive</td></tr>
-        <tr class="hl"><td class="l">10% down · 36 months <span class="best">Featured</span></td><td class="n">₱81,500</td><td class="n">₱114,500</td></tr>
-        <tr><td class="l">10% down · 60 months</td><td class="n">₱78,600</td><td class="n">₱110,400</td></tr>
-        <tr><td class="l">20% down · 36 months</td><td class="n">₱79,400</td><td class="n">₱111,600</td></tr>
-        <tr><td class="l">20% down · 60 months</td><td class="n">₱76,800</td><td class="n">₱108,000</td></tr>
-        <tr class="sec"><td colspan="3">Down payment and cash</td></tr>
-        <tr><td class="l">Reservation fee</td><td class="n">₱200,000</td><td class="n">₱200,000</td></tr>
-        <tr><td class="l">Rest of 10% down <small>(10% down, 36-month term)</small></td><td class="n">₱3,987,000</td><td class="n">₱5,686,100</td></tr>
-        <tr><td class="l">Cash, all-in <small>(30% + 1% off, other charges included)</small></td><td class="n">₱38,936,277.50</td><td class="n">₱54,732,857.62</td></tr>
+        <tr class="sec"><td colspan="3">Monthly, fixed for the full term · VAT-inclusive · Standard terms</td></tr>
+        <tr><td class="l">10% down · 7% over 36 mo <small>20% off + 2% EBD</small></td><td class="n">₱80,600</td><td class="n">₱113,300</td></tr>
+        <tr><td class="l">10% down · 10% over 60 mo <small>10% off + 2% EBD</small></td><td class="n">₱77,800</td><td class="n">₱109,300</td></tr>
+        <tr class="sec"><td colspan="3">November special · Narra D and Molave C only · Nov 1–30, 2026</td></tr>
+        <tr class="hl"><td class="l">10% down · 5% over 48 mo <small>15% off + 2% EBD</small> <span class="best">Lowest monthly</span></td><td class="n">₱45,900</td><td class="n na">Not eligible</td></tr>
+        <tr class="hl"><td class="l">20% down · 5% over 48 mo <small>17% off + 2% EBD</small></td><td class="n">₱44,800</td><td class="n na">Not eligible</td></tr>
+        <tr class="sec"><td colspan="3">Down payment (after ₱200,000 reservation) and cash</td></tr>
+        <tr><td class="l">Rest of 10% down <small>(10% down, 48-month special)</small></td><td class="n">₱4,203,700</td><td class="n na">—</td></tr>
+        <tr><td class="l">Rest of 10% down <small>(10% down, 36-month term)</small></td><td class="n">₱3,944,700</td><td class="n">₱5,626,600</td></tr>
+        <tr><td class="l">Cash price <small>(30% + 2% off, VAT-incl.; other charges extra)</small></td><td class="n">₱36,265,472.32</td><td class="n">₱50,982,641.92</td></tr>
       </tbody>
     </table>
-    <p style="font-size:6.8px;color:var(--mut);margin-top:1.2mm">On deferred terms, the balance is due as a lump sum after the last monthly payment (month 37 or 61), usually through a bank loan. Other charges are due in the final month.</p>
+    <p style="font-size:6.8px;color:var(--mut);margin-top:1.2mm">Term codes, e.g. 10-5(48)-85: 10% down, 5% spread over 48 monthly payments, then an 85% balance after the last monthly, usually through a bank loan. Unit 11D is in the Narra D line. Other charges are separate.</p>
 
-    <h2>Current Promos</h2>
+    <h2>November 2026 Promos <small>Payment terms valid November 1–30, 2026</small></h2>
     <div class="promos">
-      <div class="promo"><b>Up to 30%</b><div class="t">Term discount</div><p>20% on 10% down / 36 mo, 10% on 10% / 60 mo, 22% and 12% on 20% down terms, 30% on cash.</p></div>
-      <div class="promo"><b>+1%</b><div class="t">Early booking</div><p>Extra 1% off when the account is booked with complete requirements within 30 days of reservation.</p></div>
-      <div class="promo"><b>10%</b><div class="t">Low down payment</div><p>Fixed monthly over 36 or 60 months. Available from the ground floor to the 11th floor only.</p></div>
+      <div class="promo"><b>Up to 30%</b><div class="t">Term discount</div><p>30% on cash, 20% on 10-7(36)-83 and 10% on 10-10(60)-80.</p></div>
+      <div class="promo"><b>+2%</b><div class="t">Early booking discount</div><p>An extra 2% off on every term, on top of the term discount.</p></div>
+      <div class="promo"><b>5% · 48 mo</b><div class="t">Narra D &amp; Molave C special</div><p>10% or 20% down, then 5% over 48 months, with 15% or 17% off. November only.</p></div>
       <div class="promo"><b>~3 mo</b><div class="t">Early move-in</div><p>Narra is Near RFO. Move in after about three monthly payments, per Ayala Land’s turnover schedule.</p></div>
     </div>
+    <div class="inc">
+      <div class="h">Event buyer’s<br>incentive</div>
+      <div><span class="br">1-Bedroom</span><b>₱40,000 Purple Card gift card</b></div>
+      <div><span class="br">2-Bedroom</span><b>Mandarin Oriental, 2D1N stay</b></div>
+      <div><span class="br">3-Bedroom</span><b>Pangulasian Island, 3D2N beach villa</b></div>
+    </div>
+    <p class="inc-note">Incentive: Gardencourt Residences accounts only. Sale must be declared at the event, buyer present and on the registration list, and account booked by November 25, 2026. Excludes Ayala Group employee and seller purchases, upgrades and transfers.</p>
+  </div>
   </div>
 
-  <div class="rsvp" style="margin-top:5mm">
+  <div class="rsvp" style="margin-top:4mm">
     <div><div class="script">We hope to see you</div><span>Sat–Sun, Nov 7–8 · 10 AM–5 PM<br>G/F Jade Social Hall, Arbor Lanes</span></div>
     <div><div class="k">RSVP &amp; private viewing</div><b>Denverleen Huang</b><span>Property Specialist, Ayala Land Premier</span></div>
     <div style="text-align:right"><b>0976 446 2000</b><span>denverleenh@gmail.com</span></div>
   </div>
-  <div class="disc">Prices and terms are based on Ayala Land Premier’s Gardencourt Residences Narra computation (October 2026), and availability is as of 29 October 2026. All are subject to change without notice and to prior sale. List prices exclude 12% VAT and Other Charges. Monthly amounts include VAT. Discounts are subject to Ayala Land approval and buyer eligibility. Infrastructure dates are government and developer targets and may change. Images are artist’s perspectives unless marked as actual photos. Prepared by an accredited seller of Ayala Land Premier. Not an official computation until signed by the proper signatory. DHSUD LTS No. 035187.</div>
+  <div class="disc">List prices are from Ayala Land Premier’s 29 October 2026 availability sheet. Payment terms are Ayala Land Premier’s November 2026 terms (special terms valid November 1–30, 2026). Amounts are seller-computed; the signed official computation prevails. All are subject to change without notice and to prior sale. List prices exclude 12% VAT and Other Charges. Monthly amounts include VAT. Discounts are subject to Ayala Land approval and buyer eligibility. Infrastructure dates are government and developer targets and may change. Images are artist’s perspectives unless marked as actual photos. Prepared by an accredited seller of Ayala Land Premier. Not an official computation until signed by the proper signatory. DHSUD LTS No. 035187.</div>
 </section>
 
 </body>
