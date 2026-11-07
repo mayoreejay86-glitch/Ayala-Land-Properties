@@ -1,0 +1,45 @@
+{
+  "brand": "Ayala Land Premium Property",
+  "tagline": "Where Luxury Becomes Legacy",
+  "signoff": "For Keeps",
+  "agent": {
+    "name": "Ree Jay Mayo",
+    "title": "Premier Property Specialist",
+    "phone": "+63 930 616 6011",
+    "email": "mayoreejay86@gmail.com",
+    "whatsapp": "https://wa.me/639306166011"
+  },
+  "colors": {
+    "charcoal": "#1A1A1A",
+    "cream": "#F9F6F1",
+    "gold": "#B8960C",
+    "gold_light": "#D4AF37",
+    "gold_pale": "#F0E6C0",
+    "gray_dark": "#4A4540",
+    "gray_mid": "#A09880",
+    "gray_light": "#E8E4DC",
+    "white": "#FFFFFF"
+  },
+  "ass_colors": {
+    "_note": "Same colors in the &HAABBGGRR form .ass captions use (AA=00 is opaque).",
+    "charcoal": "&H001A1A1A",
+    "cream": "&H00F1F6F9",
+    "gold": "&H000C96B8",
+    "gold_light": "&H0037AFD4",
+    "white": "&H00FFFFFF"
+  },
+  "fonts": {
+    "headline": "Cormorant Garamond",
+    "headline_weights": ["Light", "Regular", "Light Italic", "Italic"],
+    "body": "Jost",
+    "body_weights": ["Light", "Regular", "Medium", "SemiBold"],
+    "caption": "Montserrat ExtraBold",
+    "caption_alt": "Jost ExtraBold"
+  },
+  "ctas": [
+    "Book a Private Viewing",
+    "Schedule a Private Presentation",
+    "Request Free Consultation",
+    "Inquire Now"
+  ]
+}

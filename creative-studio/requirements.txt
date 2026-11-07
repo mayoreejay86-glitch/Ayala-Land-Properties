@@ -1,0 +1,10 @@
+# Python libraries for the ad studio, installed system-wide by setup.sh.
+# Versions are the ones verified together by check.sh.
+opencv-python==4.14.0.94  # frame analysis, face-aware reframing (scenedetect requires this build;
+                          # stay on 4.x: OpenCV 5 removed CascadeClassifier face detection)
+scenedetect==0.7.2        # find the strongest shots / cut points in long walkthrough footage
+pysubs2==1.9.1            # write styled .ass captions that ffmpeg burns in
+fonttools==4.68.0         # inspect and subset fonts used in overlays
+faster-whisper==1.2.1     # speech-to-text for auto-captions (model downloads from huggingface.co)
+pillow>=12.2,<13          # stills and text rendering; >=12.2 keeps the preinstalled PDF tools working
+numpy>=2.0
